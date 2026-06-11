@@ -2,28 +2,240 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>敬请期待</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIMEMOD.CN</title>
+
 <style>
-*{margin:0;padding:0}
+
+:root{
+    --bg:#ffffff;
+    --text:#111111;
+    --sub:#888888;
+    --line:#e9e9e9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
 body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:
+    "SF Pro Display",
+    "PingFang SC",
+    "HarmonyOS Sans SC",
+    "Microsoft YaHei",
+    sans-serif;
+
+    overflow:hidden;
+}
+
+.wrapper{
+    width:100%;
     height:100vh;
+
     display:flex;
-    align-items:center;
     justify-content:center;
-    background:#ffffff;
-    background-image: radial-gradient(#00000008 1px,transparent 1px);
-    background-size:22px 22px;
+    align-items:center;
+
+    position:relative;
 }
-.digit{
-    font-family:'Courier New',monospace;
+
+.bg-domain{
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:min(38vw,560px);
+    font-weight:900;
+
+    letter-spacing:-0.12em;
+
     color:#000;
-    font-size:52px;
-    letter-spacing:12px;
-    font-weight:600;
+
+    opacity:.025;
+
+    white-space:nowrap;
+
+    user-select:none;
+    pointer-events:none;
 }
+
+.content{
+    width:min(1200px,90%);
+    text-align:center;
+    z-index:2;
+}
+
+.label{
+    font-size:11px;
+    letter-spacing:6px;
+    color:#999;
+    text-transform:uppercase;
+
+    margin-bottom:60px;
+}
+
+.domain{
+    font-size:clamp(70px,12vw,190px);
+
+    font-weight:900;
+
+    letter-spacing:-0.08em;
+
+    line-height:.9;
+
+    color:#111;
+
+    margin-bottom:35px;
+}
+
+.desc{
+    font-size:18px;
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:60px;
+}
+
+.divider{
+    width:50px;
+    height:1px;
+    background:var(--line);
+
+    margin:0 auto 60px auto;
+}
+
+.email{
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    letter-spacing:-0.03em;
+
+    transition:.3s ease;
+}
+
+.email:hover{
+    opacity:.55;
+}
+
+.tip{
+    margin-top:18px;
+
+    font-size:14px;
+
+    color:#999;
+}
+
+.footer{
+    position:absolute;
+
+    bottom:40px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:12px;
+
+    color:#bbb;
+
+    letter-spacing:2px;
+}
+
+@media(max-width:768px){
+
+body{
+    overflow:auto;
+}
+
+.domain{
+    font-size:64px;
+}
+
+.bg-domain{
+    font-size:60vw;
+}
+
+.desc{
+    font-size:15px;
+}
+
+.email{
+    font-size:20px;
+}
+
+.label{
+    margin-bottom:40px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
-<div class="digit">敬请期待</div>
+
+<div class="wrapper">
+
+    <div class="bg-domain">
+        MINEMOD.CN
+    </div>
+
+    <div class="content">
+
+        <div class="label">
+            PRIVATE ACQUISITION
+        </div>
+
+        <h1 class="domain">
+            MINEMOD.CN
+        </h1>
+
+        <div class="desc">
+            优质数字资产<br>
+            如有购买意向，请发送邮件并附上您的报价
+        </div>
+
+        <div class="divider"></div>
+
+        <a
+            class="email"
+            href="mailto:kimlin524@163.com?subject=KYAZ.CN 收购咨询">
+            kimlin524@163.com
+        </a>
+
+        <div class="tip">
+            请在邮件中注明报价金额
+        </div>
+
+    </div>
+
+    <div class="footer">
+        DIGITAL PROPERTY · 2026
+    </div>
+
+</div>
+
 </body>
 </html>
